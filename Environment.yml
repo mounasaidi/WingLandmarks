@@ -1,0 +1,23 @@
+name: tsetse-wing
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - pytorch=2.0.0
+  - torchvision=0.15.0
+  - cudatoolkit=11.8
+  - ultralytics=8.0.0
+  - opencv=4.8.0
+  - scikit-image=0.21.0
+  - scikit-learn=1.3.0
+  - pandas=2.0.0
+  - numpy=1.24.0
+  - matplotlib=3.7.0
+  - tqdm=4.65.0
+  - jupyter=1.0.0
+  - pip
+  - pip:
+    - pyyaml>=6.0
