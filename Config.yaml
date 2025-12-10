@@ -1,0 +1,31 @@
+# Configuration du projet
+project:
+  name: "Tsetse Wing Vein Landmark Detection"
+  version: "1.0.0"
+  description: "Deep learning pipeline for detecting vein junctions in tsetse fly wings"
+
+# Chemins
+paths:
+  input_data: "./data/raw_images"
+  processed_data: "./results"
+  yolo_project: "./tsetse_wing_yolov8"
+  trained_models: "./runs"
+
+# Paramètres de traitement
+processing:
+  use_gpu: true
+  cluster_radius: 12
+  min_junction_degree: 3
+  save_visualizations: true
+
+# Paramètres d'entraînement
+training:
+  model: "yolov8s-pose.pt"
+  epochs: 50
+  batch_size: 16
+  image_size: 640
+  device: "0"  # GPU 0
+
+# Classes
+classes:
+  - "vein_junction"
